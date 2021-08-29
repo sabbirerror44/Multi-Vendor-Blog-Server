@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const path = require("path");
 const chalk = require('chalk');
+const morgan = require('morgan');
 
 //internal imports
 const postRouter = require("./Routers/postRouter");
@@ -25,6 +26,7 @@ mongoose
 //request parsers
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(morgan('dev'))
 
 //set static folder
 app.use(express.static(path.join(__dirname, "public")));

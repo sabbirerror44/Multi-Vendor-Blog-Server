@@ -34,12 +34,6 @@ const profileSchema = new Schema({
             ref: 'Post',
         }
     ],
-    // bookmark: [
-    //     {
-    //         type:Schema.Types.ObjectId,
-    //         ref: 'Post',
-    //     }
-    // ]
 },{
     timestamps:true,
 })
